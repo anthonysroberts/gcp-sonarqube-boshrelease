@@ -1,0 +1,25 @@
+name: gcp-sonarqube
+version: "1"
+commit_hash: 5e1c91c
+uncommitted_changes: false
+jobs:
+- name: sonarqube
+  version: b6086c1de28712575c7c6d96992d76a361fd49be
+  fingerprint: b6086c1de28712575c7c6d96992d76a361fd49be
+  sha1: a765e34f17b132d7a506f5f441793b691af61f86
+packages:
+- name: java
+  version: f937700d80972731639d2e6a642b95cc8cf72246
+  fingerprint: f937700d80972731639d2e6a642b95cc8cf72246
+  sha1: e8b44067c23f36d5603f4a0d3640c27145ddc23c
+  dependencies: []
+- name: sonarqube
+  version: 5f2a2090a9f3baa13f8bbb8bfc90973a4839a4ff
+  fingerprint: 5f2a2090a9f3baa13f8bbb8bfc90973a4839a4ff
+  sha1: d0d9ea52c4f621290a845e1f4f8ca0ec40872aa4
+  dependencies:
+  - java
+license:
+  version: 94815311fea507b20b64e7b3b6e28e4aa3c7c462
+  fingerprint: 94815311fea507b20b64e7b3b6e28e4aa3c7c462
+  sha1: f73099c109dfe6b0a029f61151ad5e7d956df0e3
