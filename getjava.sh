@@ -2,6 +2,6 @@
 
 wget --no-cookies 
 --no-check-certificate 
---header "Cookie: oraclelicense=accept-securebackup-cookie" 
-http://download.oracle.com/otn-pub/java/jdk/8-b132/jdk-8-linux-x64.tar.gz 
+--header "Cookie: oraclelicense=accept-securebackup-cookie" \
+"http://download.oracle.com/otn-pub/java/jdk/8-b132/jdk-8-linux-x64.tar.gz"
 -O jdk-8-linux-x64.tar.gz
