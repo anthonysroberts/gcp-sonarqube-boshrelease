@@ -1,4 +1,8 @@
 jdk-8u144.linux-x64:
-  2   size: 185515842
-  3   object_id: d63859c7-9539-4d09-53d9-8a19d36345cc
-  4   sha: d4c4f02908d39827393dd77f9eb8da348363efda
+  size: 0
+  object_id: 41eca547-456e-4cda-6bd5-3beaa781d741
+  sha: ""
+sonar.6.5.tar.gz:
+  size: 8980835
+  object_id: 9243e958-338f-4edd-74a8-21b900175de2
+  sha: e22a0d808b5f3498befabe412482d6964a84f221
