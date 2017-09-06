@@ -1,6 +1,0 @@
----
-name: gcp-sonarqube
-packages: []
-templates:
-  ignoreme: ignoreme
-properties: {}
