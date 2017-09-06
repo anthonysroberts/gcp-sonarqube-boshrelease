@@ -1,4 +1,5 @@
 ---
 name: java
 dependencies: []
-files: []
+files: 
+  - jdk-8u144.linux-x64
