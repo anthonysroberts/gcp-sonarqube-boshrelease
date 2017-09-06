@@ -1,0 +1,6 @@
+---
+- type: replace
+  path: /releases/name=gcp-sonarqube
+  value:
+    name: gcp-sonarqube
+    version: latest
