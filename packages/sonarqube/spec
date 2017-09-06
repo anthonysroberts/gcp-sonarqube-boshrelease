@@ -1,5 +1,6 @@
 ---
 name: sonarqube
-dependencies: []
+dependencies: 
+ - java
 files:
-- sonarqube/sonar.6.5.tar.gz
+ - sonar.6.5.tar.gz
