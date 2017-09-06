@@ -2,4 +2,4 @@
 name: java
 dependencies: []
 files: 
-  - jdk-8u144.linux-x64
+  - jdk-8u144.linux-x64.tar.gz
