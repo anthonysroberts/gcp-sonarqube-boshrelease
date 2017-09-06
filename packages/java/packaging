@@ -3,7 +3,7 @@ set -u # report the usage of uninitialized variables
 
 JAVA_VERSION="1.8.0_144"
 
-archive="java/jdk-8u144-linux-x64.tar.gz"
+archive="jdk-8u144-linux-x64.tar.gz"
 
 echo "Extracting archive..."
 tar xzf ${archive}
