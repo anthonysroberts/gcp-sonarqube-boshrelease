@@ -28,5 +28,5 @@ instance_groups:
     stemcell: default
     networks: 
     - name: default
-      static_ips: 
-     - 10.0.0.13
+      static_ips:
+      - 10.0.0.13
