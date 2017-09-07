@@ -2,8 +2,8 @@
 name: gcp-sonarqube
 
 releases:
-- name: gcp-sonarqube
-  version: latest
+ - name: gcp-sonarqube
+   version: latest
 
 update:
   canaries: 1
@@ -13,23 +13,24 @@ update:
   serial: false
   
 stemcells:
-- alias: default
-  os: ubuntu-trusty
-  version: latest
+ - alias: default
+   os: ubuntu-trusty
+   version: latest
 
 instance_groups:
-- name: gcp-sonarqube
-  azs: z1
-  instances: 1
-  vm_type: g1-small
-  stemcell: default
-  networks: 
-  - name: default
-    static_ips: 
-    - 10.0.0.16
-  jobs:
-  - name: sonarqube
-    release: gcp-sonarqube
-    properties: {}
+  - name: gcp-sonarqube
+    azs: 
+    - z1
+    instances: 1
+    vm_type: g1-small
+    stemcell: default
+    networks: 
+    - name: default
+      static_ips: 
+     - 10.0.0.16
+   jobs:
+   - name: sonarqube
+     release: gcp-sonarqube
+     properties: {}
 
 variables: []
