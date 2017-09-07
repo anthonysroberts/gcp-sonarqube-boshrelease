@@ -5,32 +5,28 @@ releases:
  - name: gcp-sonarqube
    version: latest
 
-update:
-  canaries: 1
-  canary_watch_time: 1000-60000
-  update_watch_time: 1000-60000
-  max_in_flight: 1
-  serial: false
-  
 stemcells:
  - alias: default
    os: ubuntu-trusty
    version: latest
-
+   
+update:
+  canaries: 1
+  max_in_flight: 1
+  canary_watch_time: 1000-60000
+  update_watch_time: 1000-60000
+ 
 instance_groups:
   - name: gcp-sonarqube
     azs: 
     - z1
     instances: 1
+    jobs:
+    - name: sonarqube
+      release: gcp-sonarqube
     vm_type: g1-small
     stemcell: default
     networks: 
     - name: default
       static_ips: 
-     - 10.0.0.16
-    jobs:
-    - name: sonarqube
-      release: gcp-sonarqube
-      properties: {}
-
-variables: []
+     - 10.0.0.13
