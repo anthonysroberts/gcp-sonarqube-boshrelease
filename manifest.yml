@@ -28,9 +28,9 @@ instance_groups:
     - name: default
       static_ips: 
      - 10.0.0.16
-   jobs:
-   - name: sonarqube
-     release: gcp-sonarqube
-     properties: {}
+    jobs:
+    - name: sonarqube
+      release: gcp-sonarqube
+      properties: {}
 
 variables: []
