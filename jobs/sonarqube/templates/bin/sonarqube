@@ -1,17 +1,30 @@
-#!/bin/sh -e
+#!/bin/bash
+
+JOB=sonarqube
+RUN_DIR=/var/vcap/sys/run/$JOB
+LOG_DIR=/var/vcap/sys/log/$JOB
+PIDFILE=$RUN_DIR/$JOB.pid
+CONF_DIR=/var/vcap/jobs/$JOB/config
+SONARCTL=var/vcap/packages/sonarqube/sonar-application/src/main/assembly/bin/linux-x86-64/sonar.sh
+APSTART=/var/vcap/sys/log/$JOB/start.log
 
 export JAVA_HOME=/var/vcap/packages/java
-JAVA=${JAVA_HOME}/bin/java
+export PATH=$JAVA_HOME/bin:$PATH
 
-export JAVA_OPTS=""
-export JAVA_TOOL_OPTIONS=""
-#export JAVA_TOOL_OPTIONS="-Djava.awt.headless=true"
+case $1 in
 
-#SONARQUBE=/var/vcap/packages/sonarqube/bin/linux-x86-64/sonar.sh
-SONARQUBE=/var/vcap/packages/sonarqube/sonar-application/src/main/assembly/bin/linux-x86-64/sonar.sh
-MEMORY_SETTINGS=""
+  start)
+    mkdir -p $RUN_DIR
+    mkdir -p $LOG_DIR
 
-#start sonarqube
-echo "${JAVA} ${MEMORY_SETTINGS} ${JAVA_OPTS} -jar ${SONARQUBE} start"
-#${JAVA} ${MEMORY_SETTINGS} ${JAVA_OPTS} -jar ${SONARQUBE} start
-${SONARQUBE} start
+    $SONARCTL start >> $APSTART 2>&1
+    ;;
+
+  stop)
+    $SONARCTL stop  >> $APSTART 2>&1
+    ;;
+
+  *)
+  echo "Usage: ${JOB}_ctl {start|stop}" ;;
+esac
+exit 0
