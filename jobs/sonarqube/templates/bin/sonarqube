@@ -13,4 +13,5 @@ MEMORY_SETTINGS=""
 
 #start sonarqube
 echo "${JAVA} ${MEMORY_SETTINGS} ${JAVA_OPTS} -jar ${SONARQUBE} start"
-${JAVA} ${MEMORY_SETTINGS} ${JAVA_OPTS} -jar ${SONARQUBE} start
+#${JAVA} ${MEMORY_SETTINGS} ${JAVA_OPTS} -jar ${SONARQUBE} start
+${SONARQUBE} start
