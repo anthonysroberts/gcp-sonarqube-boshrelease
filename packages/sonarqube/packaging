@@ -9,4 +9,4 @@ set -u # report the usage of uninitialized variables
 tar -xvzf sonar.6.5.tar.gz 
 
 # Alternatively, to copy archive contents:
-cp -a sonar*/* $BOSH_INSTALL_TARGET
+cp -a sonarqube-6.5*/* $BOSH_INSTALL_TARGET
