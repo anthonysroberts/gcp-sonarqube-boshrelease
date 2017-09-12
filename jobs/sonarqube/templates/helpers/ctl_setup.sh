@@ -30,8 +30,10 @@ for package_dir in $(ls -d /var/vcap/packages/*)
 do
   has_busybox=0
   # Add all packages' /bin & /sbin into $PATH
-  for package_bin_dir in $(ls -d ${package_dir}/*bin)
-  do
+  #commented next line in order to bespoke for the file path for tar file as opposed to zip file
+  #for package_bin_dir in $(ls -d ${package_dir}/*bin)
+  for package_bin_dir in $(ls -d ${package_dir}/sonar-application/src/main/assembly/bin)
+    do
     # Do not add any packages that use busybox, as impacts builtin commands and
     # is often used for different architecture (via containers)
     if [ -f ${package_bin_dir}/busybox ]
