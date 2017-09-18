@@ -3,4 +3,4 @@ name: sonarqube
 dependencies: 
  - java
 files:
- - sonar.6.5.tar.gz
+ - sonarqube-6.5.zip
