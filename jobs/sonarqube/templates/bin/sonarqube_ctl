@@ -12,11 +12,11 @@ export LANG=en_US.UTF-8
 case $1 in
 
   start)
-    exec chpst -u vcap:vcap /var/vcap/packages/sonarqube/sonar-application/src/main/assembly/bin/linux-x86-64/sonar.sh \
+    exec chpst -u vcap:vcap /var/vcap/packages/sonarqube/bin/linux-x86-64/sonar.sh \
          >>$LOG_DIR/$JOB_NAME.log 2>&1
     ;;
   stop)
-    exec chpst -u vcap:vcap /var/vcap/packages/sonarqube/sonar-application/src/main/assembly/bin/linux-x86-64/sonar.sh \
+    exec chpst -u vcap:vcap /var/vcap/packages/sonarqube/bin/linux-x86-64/sonar.sh \
          >>$LOG_DIR/$JOB_NAME.log 2>&1
     ;;
   *)
