@@ -6,9 +6,9 @@ set -u # report the usage of uninitialized variables
 # $BOSH_INSTALL_TARGET - where you copy/install files to be included in package
 
 export HOME=/var/vcap
-#cd ${BOSH_COMPILE_TARGET}/sonarqube
+cd ${BOSH_COMPILE_TARGET}/sonarqube
 
-unzip sonarqube-6.5.zip
+unzip sonarqube*.zip
 
 # Alternatively, to copy archive contents:
 mv sonarqube-6.5/* $BOSH_INSTALL_TARGET
