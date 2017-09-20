@@ -8,6 +8,8 @@ source /var/vcap/jobs/sonarqube/helpers/ctl_setup.sh 'sonarqube'
 
 export PORT=${PORT:-5000}
 export LANG=en_US.UTF-8
+export JAVA_HOME=/var/vcap/packages/java
+export PATH=$JAVA_HOME/bin:$PATH
 
 case $1 in
 
