@@ -8,6 +8,6 @@ archive="jdk-8u144.linux-x64.tar.gz"
 echo "Extracting archive..."
 tar xzf ${archive}
 
-mv jdk*/* ${BOSH_INSTALL_TARGET}
+mv jdk* ${BOSH_INSTALL_TARGET}
 export JAVA_HOME=${BOSH_INSTALL_TARGET}
 export PATH=$PATH:$JAVA_HOME/bin
