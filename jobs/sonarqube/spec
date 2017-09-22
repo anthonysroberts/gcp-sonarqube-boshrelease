@@ -10,13 +10,5 @@ templates:
   bin/monit_debugger: bin/monit_debugger
   helpers/ctl_setup.sh: helpers/ctl_setup.sh
   helpers/ctl_utils.sh: helpers/ctl_utils.sh
-  data/properties.sh.erb: data/properties.sh
-  config/sonar.properties: config/sonar.properties
+    config/sonar.properties: config/sonar.properties
   bin/pre-start: bin/pre-start
-
-properties: 
-  sonar.server.address:
-    description: "Fully qualified address of Sonar server"
-  sonar.server.port:
-    description: "Port of the sonar server"
-    default: 900
